@@ -12,7 +12,7 @@
             Console.WriteLine("Welcome to Employee Wage Computation Program\n");
             
             
-            EmpWageBuildArray empWageBuildArray = new EmpWageBuildArray();
+            IComputeEmpWage empWageBuildArray = new EmpWageBuildArray();
 
             empWageBuildArray.addCompanyEmpWage("Apple", 35, 15, 100);
             empWageBuildArray.addCompanyEmpWage("Microsoft", 33, 17, 90);

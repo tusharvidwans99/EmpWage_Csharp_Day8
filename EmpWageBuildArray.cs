@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmpWage_Csharp_Day8
 {
-    public class EmpWageBuildArray
+    public class EmpWageBuildArray : IComputeEmpWage
     {
         /// <summary>
         /// This program is used to check whether employee is present or absent
