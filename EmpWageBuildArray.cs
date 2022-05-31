@@ -15,31 +15,44 @@ namespace EmpWage_Csharp_Day8
 
         public const int IS_FULL_TIME = 1;
         public const int IS_PART_TIME = 2;
-        private int numofCompany = 0;
 
-        private CompanyEmpWage[] companyEmpWageArray;
+        //private int numofCompany = 0;
+        //private CompanyEmpWage[] companyEmpWageArray;
+
+        public LinkedList<CompanyEmpWage> companyEmpWageList;
 
         public string companyName;
         
         public EmpWageBuildArray()
         {
-            this.companyEmpWageArray = new CompanyEmpWage[5];
+            //this.companyEmpWageArray = new CompanyEmpWage[5];
+            this.companyEmpWageList = new LinkedList<CompanyEmpWage>();
         }
 
         public void addCompanyEmpWage(string company, int empRatePerHour, int numofWorkingDays, int maxHoursPerMonth)
         {
-            companyEmpWageArray[this.numofCompany] = new CompanyEmpWage(company, empRatePerHour, numofWorkingDays, maxHoursPerMonth);
-            numofCompany++;
+            //companyEmpWageArray[this.numofCompany] = new CompanyEmpWage(company, empRatePerHour, numofWorkingDays, maxHoursPerMonth);
+            //numofCompany++;
+            CompanyEmpWage companyEmpWage = new CompanyEmpWage(company, empRatePerHour, numofWorkingDays, maxHoursPerMonth);
+            this.companyEmpWageList.AddLast(companyEmpWage);
+
         }
 
         
         public void computeEmpWage()
         {
-            for(int i=0; i < numofCompany; i++)
+            //for(int i=0; i < numofCompany; i++)
+            //{
+                //companyEmpWageArray[i].setTotalEmpWage(this.computeEmpWage(this.companyEmpWageArray[i]));
+                //Console.WriteLine(this.companyEmpWageArray[i].toString());
+            //}
+
+            foreach(CompanyEmpWage companyEmpWage in companyEmpWageList)
             {
-                companyEmpWageArray[i].setTotalEmpWage(this.computeEmpWage(this.companyEmpWageArray[i]));
-                Console.WriteLine(this.companyEmpWageArray[i].toString());
+                companyEmpWage.setTotalEmpWage(this.computeEmpWage(companyEmpWage));
+                Console.WriteLine(companyEmpWage.toString());
             }
+
         }
 
         public int computeEmpWage(CompanyEmpWage companyEmpWage)

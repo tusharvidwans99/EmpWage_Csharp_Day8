@@ -27,7 +27,7 @@ namespace EmpWage_Csharp_Day8
 
         public string toString()
         {
-            string message = $"Total Emp Wage for company: {this.company} is: {this.totalEmpWage}";
+            string message = $"Total Emp Wage for company: {this.company} is: {this.totalEmpWage}\n";
             return message;
         }
     }
