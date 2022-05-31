@@ -70,11 +70,5 @@ namespace EmpWage_Csharp_Day8
             }
             return totalEmpHrs * companyEmpWage.empRatePerHour;
         }
-
-
-        
-
-        
-
     }
 }

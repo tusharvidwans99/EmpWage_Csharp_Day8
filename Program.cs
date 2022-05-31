@@ -21,9 +21,6 @@
             empWageBuildArray.addCompanyEmpWage("TCS", 15, 25, 130);
             empWageBuildArray.computeEmpWage();
 
-
-
-
         }
 
     }

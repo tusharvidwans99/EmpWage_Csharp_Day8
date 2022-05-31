@@ -30,7 +30,5 @@ namespace EmpWage_Csharp_Day8
             string message = $"Total Emp Wage for company: {this.company} is: {this.totalEmpWage}";
             return message;
         }
-
-
     }
 }
