@@ -21,6 +21,8 @@
             empWageBuildArray.addCompanyEmpWage("TCS", 15, 25, 130);
             empWageBuildArray.computeEmpWage();
 
+            Console.WriteLine($"Total Wage for Google company is: "+empWageBuildArray.getTotalWage("Google"));
+
         }
 
     }

@@ -11,5 +11,7 @@ namespace EmpWage_Csharp_Day8
         public void addCompanyEmpWage(string company, int empRatePerHour, int numofWorkingDays, int maxHoursPerMonth);
 
         public void computeEmpWage();
+
+        public int getTotalWage(string company);
     }
 }

@@ -41,6 +41,11 @@ namespace EmpWage_Csharp_Day8
 
         }
 
+        public int getTotalWage(string company)
+        {
+            return this.companyEmpWageDictionary[company].totalEmpWage;
+        }
+
         
         public void computeEmpWage()
         {
