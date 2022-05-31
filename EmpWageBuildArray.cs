@@ -19,7 +19,8 @@ namespace EmpWage_Csharp_Day8
         //private int numofCompany = 0;
         //private CompanyEmpWage[] companyEmpWageArray;
 
-        public LinkedList<CompanyEmpWage> companyEmpWageList;
+        private LinkedList<CompanyEmpWage> companyEmpWageList;
+        private Dictionary<string , CompanyEmpWage> companyEmpWageDictionary;
 
         public string companyName;
         
@@ -27,6 +28,7 @@ namespace EmpWage_Csharp_Day8
         {
             //this.companyEmpWageArray = new CompanyEmpWage[5];
             this.companyEmpWageList = new LinkedList<CompanyEmpWage>();
+            this.companyEmpWageDictionary = new Dictionary<string , CompanyEmpWage>();
         }
 
         public void addCompanyEmpWage(string company, int empRatePerHour, int numofWorkingDays, int maxHoursPerMonth)
@@ -35,6 +37,7 @@ namespace EmpWage_Csharp_Day8
             //numofCompany++;
             CompanyEmpWage companyEmpWage = new CompanyEmpWage(company, empRatePerHour, numofWorkingDays, maxHoursPerMonth);
             this.companyEmpWageList.AddLast(companyEmpWage);
+            this.companyEmpWageDictionary.Add(company, companyEmpWage);
 
         }
 
